@@ -1,5 +1,6 @@
-# remove DAG examples in airflow
-export AIRFLOW__CORE__LOAD_EXAMPLES=False
+export AIRFLOW_HOME="$(pwd)/airflow"  # airflow working directory
+export AIRFLOW__CORE__LOAD_EXAMPLES=False  # remove all example DAGs
+export AIRFLOW__CORE__DAGS_FOLDER="$(pwd)/src/dags"  # DAGs directory
 
 # Initialize the database
 airflow db init
@@ -19,5 +20,4 @@ airflow webserver -p 8080
 # Start the scheduler
 airflow scheduler
 
-# Visit 0.0.0.0:8080 in the browser and use the admin credentials to login.
-# The default airflow directory is located at ~/airflow
+# Visit 0.0.0.0:8080 in the browser and use the admin credentials to login

@@ -1,6 +1,6 @@
 # Make sure the virtual environment is activated
 PYTHON_VENV=.venv
-source activate $PYTHON_VENV/bin/activate
+source $PYTHON_VENV/bin/activate
 
 AIRFLOW_VERSION=2.5.2
 PYTHON_VERSION="$(python --version | cut -d " " -f 2 | cut -d "." -f 1-2)" # extract python version from virtual environment

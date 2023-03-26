@@ -1,3 +1,7 @@
+# Make sure the virtual environment is activated
+PYTHON_VENV=.venv
+source $PYTHON_VENV/bin/activate
+
 export AIRFLOW_HOME="$(pwd)/airflow"  # airflow working directory
 export AIRFLOW__CORE__LOAD_EXAMPLES=False  # remove all example DAGs
 export AIRFLOW__CORE__DAGS_FOLDER="$(pwd)/src/dags"  # DAGs directory

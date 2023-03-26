@@ -1,3 +1,5 @@
 .*
 !.gitignore
 airflow/
+__pycache__/
+*.pyc
